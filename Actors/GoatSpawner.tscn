@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Actors/GoatSpawner.gd" type="Script" id=1]
+
+[node name="GoatSpawner" type="Node2D" groups=["GoatSpawner"]]
+script = ExtResource( 1 )

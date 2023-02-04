@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/Background_Field.png" type="Texture" id=1]
+[ext_resource path="res://Levels/MainLevel.gd" type="Script" id=2]
+[ext_resource path="res://Actors/GoatSpawner.tscn" type="PackedScene" id=3]
+
+[node name="MainLevel" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+process_mode = 0
+
+[node name="VeggieGrowTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="GoatSpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="GoatSpawner" parent="." instance=ExtResource( 3 )]
+position = Vector2( 624, -229 )
+direction = "left"
+
+[node name="GoatSpawner2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 635, 186 )
+direction = "left"
+
+[node name="GoatSpawner3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -657, 205 )
+_move_direction = 1
+
+[node name="GoatSpawner4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -644, -224 )
+_move_direction = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
