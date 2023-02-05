@@ -1,4 +1,4 @@
-class_name Goat
+class_name Rabbit
 extends KinematicBody2D
 
 enum MoveDirection {LEFT, RIGHT}
@@ -28,8 +28,8 @@ func on_spawn(facing_left):
 	print(facing_left)
 	if facing_left:
 		_velocity = Vector2(-100,0);
-		$Sprite.flip_h = false;
+		$AnimatedSprite.flip_h = false;
 	else:
 		_velocity = Vector2(100,0);
-		$Sprite.flip_h = true;
+		$AnimatedSprite.flip_h = true;
 	

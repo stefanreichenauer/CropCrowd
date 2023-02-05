@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Carrot_Kazoo_1.0.mp3-3106403cbac60cd87aa6f7648512e91c.mp3str"
+
+[deps]
+
+source_file="res://Audio/Carrot_Kazoo_1.0.mp3"
+dest_files=[ "res://.import/Carrot_Kazoo_1.0.mp3-3106403cbac60cd87aa6f7648512e91c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

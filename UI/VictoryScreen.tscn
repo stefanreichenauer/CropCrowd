@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/VictoryScreen.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Points.tres" type="Resource" id=2]
+
+[node name="VictoryScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+points = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.211765 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_right = 204.0
+margin_bottom = 120.0
+rect_scale = Vector2( 5, 5 )
+text = "Draw"
+align = 1
+valign = 1

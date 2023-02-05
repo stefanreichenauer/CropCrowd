@@ -10,6 +10,7 @@ var goatSpawner = [];
 var rand = RandomNumberGenerator.new()
 var veggieScene = load("res://Actors/PickupVeggie2.tscn");
 var goatScene = load("res://Actors/Goat.tscn");
+var rabbitScene = load("res://Actors/Rabbit.tscn");
 
 var veggie_offset = 20;
 
@@ -33,13 +34,20 @@ func on_timeout():
 func on_GoatSpawnTimer_timeout():
 	rand.randomize()	
 	var spawner = goatSpawner[randi() % goatSpawner.size()]
-	var goat = goatScene.instance()
+	var goat;
+	if randi() % 2:
+		goat = goatScene.instance()
+	else:
+		goat = rabbitScene.instance()
 	goat.position = spawner.position;
 	
-	if spawner.direction == "left":
-		goat._velocity = Vector2(-100,0);
-	else:
-		goat._velocity = Vector2(100,0);	
+#	goat.emit_signal("spawn", spawner.direction == "left");
+	goat.on_spawn(spawner.direction == "left");
+#
+#	if spawner.direction == "left":
+#		goat._velocity = Vector2(-100,0);
+#	else:
+#		goat._velocity = Vector2(100,0);	
 	add_child(goat)
 	
 	

@@ -8,4 +8,4 @@ margin_bottom = 40.0
 margin_right = 40.0
 margin_bottom = 14.0
 text = "000"
-autowrap = true
+align = 1
